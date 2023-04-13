@@ -6,7 +6,6 @@ app = Flask(__name__)
 @app.route('/')
 def test():
     data_list = MyData().get_database()
-    print(data_list)
     return render_template("app.html", data_list=data_list)
  
 if __name__ == "__main__":
