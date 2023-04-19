@@ -8,7 +8,7 @@ db = pymysql.connect(host='localhost',
                      db='Anycall',
                      charset='utf8')
 
-data = pd.read_csv('NaverContact.csv')
+data = pd.read_csv('../../NaverContact.csv')
 df = pd.DataFrame(data)
 
 cursor = db.cursor()

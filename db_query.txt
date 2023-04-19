@@ -1,4 +1,7 @@
---- 데이터 베이스 쿼리 넣어 둡 니 ㄷ ㅏ ---
+--- 데이터 베이스 쿼리  ---
+mysql -u root -p
+P@ssw0rd
+
 CREATE DATABASE Anycall;
 
 use Anycall;
@@ -12,5 +15,6 @@ CREATE TABLE anycall
     lastName VARCHAR(255) NOT NULL,
     nickName VARCHAR(255),
     phone VARCHAR(20) NOT NULL,
+    memo VARCAHR(500),
     PRIMARY KEY(id)
 ) ENGINE=INNODB;
