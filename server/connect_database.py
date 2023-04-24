@@ -6,7 +6,6 @@ class MyData:
     
     def get_database(self):
         data_list = []
-        db = pymysql.connect(host='localhost', user='root', db='Anycall', password='P@ssw0rd', charset='utf8')
         #host: 0.0.0.2 이거에 맞는 포트를 활용, user에 대해서도 여러가지 권한을 주어야 한다.(어드민, 일반 사용자, 관리자1...)
         curs = db.cursor()
         
@@ -24,7 +23,6 @@ class MyData:
         # return rows
     
     def insert_database(self, firstName, lastName, nickName, phone, memo):
-        db = pymysql.connect(host='localhost', user='root', db='Anycall', password='P@ssw0rd', charset='utf8')
         curs = db.cursor()
         
         sql = '''insert into anycall (firstName, lastName, nickName, phone, memo) values(%s,%s,%s,%s)'''
@@ -33,7 +31,6 @@ class MyData:
         db.close()
     
     def update_database(self, id, firstName, lastName, nickName, phone, memo):
-        db = pymysql.connect(host='localhost', user='root', db='Anycall', password='P@ssw0rd', charset='utf8')
         curs = db.cursor()
         
         sql = "update anycall set firstName=%s, lastName=%s, nickName=%s, phone=%s, memo=%s where id=%s"
@@ -43,7 +40,6 @@ class MyData:
         db.close()
 
     # def update_memo_in_database(contact_id, memo):
-    #     db = pymysql.connect(host='localhost', user='root', db='Anycall', password='P@ssw0rd', charset='utf8')
     #     curs = db.cursor()
 
     #     sql = "UPDATE anycall SET memo=%s WHERE id=%s"
@@ -53,7 +49,6 @@ class MyData:
 
 
     def delete_database(self, id):
-        db = pymysql.connect(host='localhost', user='root', db='Anycall', password='P@ssw0rd', charset='utf8')
         curs = db.cursor()
         
         sql = "delete from emp where empno=%s"
