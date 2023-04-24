@@ -20,16 +20,6 @@ def read_data():
     # return render_template("app.html", data_list=data_list)
 
 
-# def update_database(id, field, value):
-#     db = pymysql.connect(host='localhost', user='root', db='Anycall', password='P@ssw0rd', charset='utf8')
-#     curs = db.cursor()
-    
-#     sql = f"UPDATE anycall SET {field} = %s WHERE id = %s"
-#     curs.execute(sql, (value, id))
-#     db.commit()
-#     db.close()
-
-
 
 
 # @app.route('/update', methods=['POST'])
